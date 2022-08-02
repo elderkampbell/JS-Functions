@@ -20,15 +20,7 @@ it('Para os argumentos Monday e 09:00-AM deve retornar a string The zoo is close
 it('Para os argumentos Tuesday e 09:00-AM deve retornar a string The zoo is open', () => {
   expect(getOpeningHours('Tuesday', '09:00-AM')).toBe('The zoo is open');
 });
-it('Para os argumentos Wednesday e 09:00-AM deve retornar a string The zoo is closed', () => {
-  expect(getOpeningHours('Wednesday', '09:00-PM')).toBe('The zoo is closed');
-});
-it('Para os argumentos argumentos Wednesday e 00:00-AM deve retornar a string The zoo is closed', () => {
-  expect(getOpeningHours('Wednesday', '00:00-AM')).toBe('The zoo is closed');
-});
-it('Para os argumentos argumentos Thursday e 00:00-AM deve retornar a string The zoo is closed', () => {
-  expect(getOpeningHours('Thursday', '12:00-AM')).toBe('The zoo is closed');
-});
+
 it('Se a hora for maior de 12 exibe a mensagem The hour must be between 0 and 12', () => {
   expect(() => getOpeningHours('Tuesday', '13:00-PM')).toThrow('The hour must be between 0 and 12');
 });
